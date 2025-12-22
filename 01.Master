@@ -1,0 +1,296 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="01.master.cs" Inherits="lab04_sachdb._01" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">	
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="header-wrap">
+                <div class="top-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="social-links">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="icon icon-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-youtube-play"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-behance-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--social-links-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="right-element">
+                                    <a href="#" class="user-account for-buy"><i
+                                        class="icon icon-user"></i><span>Account</span></a>
+                                    <a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart:(0
+									$)</span></a>
+
+                                    <div class="action-menu">
+
+                                        <div class="search-bar">
+                                            <a href="#" class="search-button search-toggle" data-selector="#header-wrap">
+                                                <i class="icon icon-search"></i>
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--top-right-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--top-content-->
+
+                <header id="header">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <div class="main-logo">
+                                    <a href="index.aspx">
+                                        <img src="assets/main-logo.png" alt="logo"></a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-10">
+
+                                <nav id="navbar">
+                                    <div class="main-menu stellarnav">
+                                        <ul class="menu-list">
+                                            <li class="menu-item active"><a href="index.aspx">Trang Chủ</a></li>
+                                            <li class="menu-item has-sub">
+												<a href="Product.aspx" class="nav-link">Danh Mục Sách</a>
+												<ul class="sub-menu">
+													<asp:Repeater 
+														ID="rpChuDe" 
+														runat="server" 
+														DataSourceID="dsChuDe" >
+														<ItemTemplate>
+															<li>
+																<a class="nav-link"
+																   href='Product.aspx?macd=<%# Eval("MaCD") %>'>
+																	<%# Eval("TenChuDe") %>
+																	(<%# Eval("TongSo") %>)
+																</a>
+															</li>
+														</ItemTemplate>
+
+													</asp:Repeater>
+												</ul>
+											</li>
+                                            <li class="menu-item"><a href="#featured-books" class="nav-link">Featured</a></li>
+                                            <li class="menu-item"><a href="#popular-books" class="nav-link">Popular</a></li>
+                                            <li class="menu-item"><a href="#special-offer" class="nav-link">Offer</a></li> 
+                                             </ul>
+
+                                        <div class="hamburger">
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                        </div>
+
+                                    </div>
+                                </nav>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </header>
+
+            </div>
+			<asp:ContentPlaceHolder ID="carousel" runat="server"></asp:ContentPlaceHolder>
+			
+            <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4">
+
+					<div class="footer-item">
+						<div class="company-brand">
+							<img src="assets/main-logo.png" alt="logo" class="footer-logo">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus liberolectus
+								nonet psryroin. Amet sed lorem posuere sit iaculis amet, ac urna. Adipiscing fames
+								semper erat ac in suspendisse iaculis.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>About Us</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">vision</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">articles </a>
+							</li>
+							<li class="menu-item">
+								<a href="#">careers</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">service terms</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">donate</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>Discover</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Trang Chủ</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Books</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Authors</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Subjects</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Advanced Search</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>My account</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Sign In</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">View Cart</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">My Wishtlist</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Track My Order</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>Help</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Help center</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Report a problem</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Suggesting edits</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Contact us</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- / row -->
+
+		</div>
+	</footer>
+	<div id="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="copyright">
+						<div class="row">
+
+							<div class="col-md-6">
+								<p>© 2022 All rights reserved. Free HTML Template by <a
+										href="https://www.templatesjungle.com/" target="_blank">TemplatesJungle</a></p>
+							</div>
+
+							<div class="col-md-6">
+								<div class="social-links align-right">
+									<ul>
+										<li>
+											<a href="#"><i class="icon icon-facebook"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-twitter"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-youtube-play"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-behance-square"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div><!--grid-->
+
+				</div><!--footer-bottom-content-->
+			</div>
+		</div>
+	</div>
+        </div>
+
+    </form>
+	<asp:SqlDataSource ID="dsChuDe" runat="server" ConnectionString="<%$ ConnectionStrings:BookStoreDBConnectionString %>" 
+		ProviderName="<%$ ConnectionStrings:BookStoreDBConnectionString.ProviderName %>"
+		SelectCommand="SELECT ChuDe.MaCD,Tenchude, COUNT(MaSach) as TongSo 
+  FROM [ChuDe] inner join Sach on ChuDe.MaCD=Sach.MaCD
+  group by ChuDe.MaCD,Tenchude" ></asp:SqlDataSource>
+</body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<script src="js/slideNav.js"></script>
+<script src="js/slideNav.min.js"></script>
+</html>
