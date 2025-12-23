@@ -2395,6 +2395,9 @@ footer#footer {
     background: #16a085;
 }
 
+.btnDetail:hover {
+    background: #16a085;
+}
 .product-style:hover button.add-to-cart {
     bottom: 380px;
     bottom: 0;
@@ -2432,6 +2435,12 @@ footer#footer {
     margin: 0 auto;
   }
 
+    .product-style img.product-item2 {
+        /*height: 550px;*/
+        object-fit: contain;
+        margin: 0;
+    }
+
   .products-grid.col-3 .product-style,
   .products-grid.col-4 .product-style,
   .products-grid.col-5 .product-style {
@@ -2443,4 +2452,12 @@ footer#footer {
   .products-grid .product-style {
     width: 100%;
   }
+}
+.book-title {
+    height: 2.8em; /* 2 dòng */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* số dòng */
+    -webkit-box-orient: vertical;
+    word-break: break-word;
 }

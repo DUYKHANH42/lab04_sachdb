@@ -1,9 +1,6 @@
-﻿using System;
+﻿using lab04_sachdb.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace lab04_sachdb
 {
@@ -12,6 +9,22 @@ namespace lab04_sachdb
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        public int CartCount
+        {
+            get
+            {
+                int total = 0;
+                if (Session["Cart"] != null)
+                {
+                    List<Cart> cart = (List<Cart>)Session["Cart"];
+                    foreach (Cart c in cart)
+                    {
+                        total += c.SoLuong;
+                    }
+                }
+                return total;
+            }
         }
     }
 }

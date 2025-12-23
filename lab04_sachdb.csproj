@@ -119,9 +119,11 @@
     <Content Include="js\jquery-1.11.0.min.js" />
     <Content Include="js\modernizr.js" />
     <Content Include="js\plugins.js" />
+    <Content Include="js\Sach.js" />
     <Content Include="js\script.js" />
     <Content Include="js\slideNav.js" />
     <Content Include="js\slideNav.min.js" />
+    <Content Include="ListCart.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -150,6 +152,14 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ListCart.aspx.cs">
+      <DependentUpon>ListCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListCart.aspx.designer.cs">
+      <DependentUpon>ListCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,7 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -89,17 +89,21 @@
 
                                                 <button type="button"
                                                     class="add-to-cart"
-                                                    data-product-tile="add-to-cart">
-                                                    Add to Cart
+                                                    data-product-tile="add-to-cart" data-masach="<%# Eval("MaSach") %>">
+                                                   <i class="icon icon-clipboard"></i> Add to Cart
                                                 </button>
                                             </figure>
 
                                             <figcaption>
-                                                <h3 style="font-family: roboto"><%# Eval("TenSach") %></h3>
+                                                <h2 style="font-family: roboto" class="book-title"><%# Eval("TenSach") %></h2>
                                                 <div class="item-price">
                                                     Giá bán: <span style="color: red; font-weight: bold"><%# Eval("Dongia", "{0:N0} đ") %></span>
                                                 </div>
-                                                    <asp:Button ID="btnDetail" PostBackUrl="~/Detail.aspx" runat="server" CssClass=" btn btn-center btn-primary btnDetail" Text="Xem Chi Tiết" />
+                                                <asp:HyperLink 
+                                                runat="server"
+                                                NavigateUrl='<%# "~/Detail.aspx?masach=" + Eval("masach") %>'
+                                                CssClass="btn btn-primary btnDetail"
+                                                Text="Xem Chi Tiết" />
                                             </figcaption>
                                         </div>
                                     </div>
