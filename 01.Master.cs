@@ -8,7 +8,13 @@ namespace lab04_sachdb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                KhachHang kh = Session["KhachHang"] as KhachHang;
 
+                spAccount.InnerText = kh != null ? kh.HoTenKH : "Account";
+                lnkAccount.NavigateUrl = kh != null ? "index.aspx" : "DangNhap.aspx";
+            }
         }
         public int CartCount
         {

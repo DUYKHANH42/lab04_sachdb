@@ -113,6 +113,9 @@
     <Content Include="css\normalize.css" />
     <Content Include="css\style.css" />
     <Content Include="css\vendor.css" />
+    <Content Include="DangKy.aspx" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="DatHang.aspx" />
     <Content Include="Detail.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
@@ -134,6 +137,37 @@
     </Compile>
     <Compile Include="01.Master.designer.cs">
       <DependentUpon>01.Master</DependentUpon>
+    </Compile>
+    <Compile Include="02.Master.cs">
+      <DependentUpon>02.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Master.designer.cs">
+      <DependentUpon>02.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\DonDatHangDAO.cs" />
+    <Compile Include="Controller\CTDonDatHangDAO.cs" />
+    <Compile Include="Controller\KhachHangDAO.cs" />
+    <Compile Include="DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatHang.aspx.cs">
+      <DependentUpon>DatHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatHang.aspx.designer.cs">
+      <DependentUpon>DatHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
@@ -160,6 +194,9 @@
       <DependentUpon>ListCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CTDatHang.cs" />
+    <Compile Include="Models\DonDatHang.cs" />
+    <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +212,7 @@
     <Content Include="css\fonts\icomoon.eot" />
     <Content Include="css\fonts\icomoon.ttf" />
     <Content Include="css\fonts\icomoon.woff" />
+    <Content Include="02.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

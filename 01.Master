@@ -40,8 +40,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="right-element">
-                                    <a href="#" class="user-account for-buy"><i
-                                        class="icon icon-user"></i><span>Account</span></a>
+                                    <asp:HyperLink ID="lnkAccount" runat="server" CssClass="user-account for-buy">
+                                        <i class="icon icon-user"></i>
+                                        <span id="spAccount" runat="server"></span>
+                                    </asp:HyperLink>
                                     <a href="ListCart.aspx" class="cart for-buy"><i class="icon icon-clipboard"></i>
                                         <span id="cartCount">(<%= CartCount %>)</span></a>
 

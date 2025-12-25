@@ -11,70 +11,61 @@ namespace lab04_sachdb
 {
 
 
-    public partial class _01
+    public partial class DatHang
     {
 
         /// <summary>
-        /// form1 control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// lnkAccount control.
+        /// rpCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkAccount;
+        protected global::System.Web.UI.WebControls.Repeater rpCart;
 
         /// <summary>
-        /// spAccount control.
+        /// lblTongTien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spAccount;
+        protected global::System.Web.UI.WebControls.Label lblTongTien;
 
         /// <summary>
-        /// rpChuDe control.
+        /// dtvKhachHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpChuDe;
+        protected global::System.Web.UI.WebControls.DetailsView dtvKhachHang;
 
         /// <summary>
-        /// carousel control.
+        /// btnDatHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder carousel;
+        protected global::System.Web.UI.WebControls.Button btnDatHang;
 
         /// <summary>
-        /// NoiDung control.
+        /// dsKH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder NoiDung;
-
-        /// <summary>
-        /// dsChuDe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsChuDe;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsKH;
     }
 }
