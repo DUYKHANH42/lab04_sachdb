@@ -27,9 +27,8 @@ namespace lab04_sachdb
             int item = (int)ViewState["item"];
             item += 3;
             ViewState["item"] = item;
-
-            dsSach.SelectCommand =
-                $"SELECT TOP {item} * FROM Sach WHERE MaCD = ? ORDER BY MaSach";
+           dsSach.SelectCommand =
+                $"SELECT TOP {item} * FROM Sach WHERE MaCD = @MaCD ORDER BY MaSach";
 
             lstSach.DataBind();
         }
