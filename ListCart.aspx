@@ -36,10 +36,10 @@
                                         <%# Eval("TenSach") %>
                                     </td>
                                     <td style="width: 120px;">
-                                        <asp:TextBox ID="txtSoLuong" min="0"
+                                        <asp:TextBox ID="txtSoLuong"
                                         runat="server"
-                                        Text='<%# Eval("SoLuong") %>' 
-                                        CssClass="form-control text-center" 
+                                        Text='<%# Eval("SoLuong") %>'
+                                        CssClass="form-control text-center"
                                         TextMode="Number" />
                                     </td>
                                     <td>

@@ -101,7 +101,7 @@
                                                 </div>
                                                 <asp:HyperLink 
                                                 runat="server"
-                                                NavigateUrl='<%# "~/Detail.aspx?masach=" + Eval("masach") +"&macd="+Eval("macd")  %>'
+                                                NavigateUrl='<%# "~/Detail.aspx?masach=" + Eval("masach") %>'
                                                 CssClass="btn btn-primary btnDetail"
                                                 Text="Xem Chi Tiết" />
                                             </figcaption>

@@ -69,11 +69,7 @@
                         <asp:BoundField DataField="NgayGiaoHang" HeaderText="Ngày giao hàng dự kiến"
                             DataFormatString="{0:dd/MM/yyyy}" />
                     </Fields>
-                    <EmptyDataTemplate> 
-                        <div>Không có đơn hàng nào! Hãy bắt đầu mua sắm <asp:HyperLink runat="server" ID="hplMuaSach" NavigateUrl="~/Product.aspx"  Text="tại đây"></asp:HyperLink></div>
-                    </EmptyDataTemplate>
                 </asp:DetailsView>
-
             </div>
             <div>
                 <asp:Button ID="btnDatHang"
