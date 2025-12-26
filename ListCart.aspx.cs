@@ -50,6 +50,18 @@ namespace lab04_sachdb
             if (e.CommandName == "update")
             {
                 TextBox txtSoLuong = (TextBox)e.Item.FindControl("txtSoLuong");
+                int soluong = int.Parse(txtSoLuong.Text);
+                if(soluong >= 0)
+                {
+                    for (int i = 0; i < cart.Count; i++)
+                    {
+                        if (cart[i].MaSach == maSach)
+                        {
+                            cart.RemoveAt(i);
+                            break;
+                        }
+                    }
+                }
                 int soLuongMoi = int.Parse(txtSoLuong.Text);
 
                 foreach (Cart c in cart)

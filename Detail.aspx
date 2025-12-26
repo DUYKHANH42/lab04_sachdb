@@ -29,7 +29,7 @@
                                     <div class="item-price">
                                         Giá bán: <span style="color: red; font-weight: bold"><%# Eval("Dongia", "{0:N0} đ") %></span>
                                     </div>
-                                    <button type="button" 
+                                    <button type="button"
                                         class="add-to-cart btn-danger"
                                         data-product-tile="add-to-cart" data-masach="<%# Eval("MaSach") %>">
                                         <i class="icon icon-clipboard"></i>Add to Cart
@@ -40,17 +40,22 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
-            <div class="section-header align-left">
-                <h2 class="text-left bg-light fw-bold text-primary" style="font-family: roboto;">SÁCH CÙNG CHỦ ĐỀ
+            <div class="section-header align-left w-100">
+            <h2 class=" text-left bg-light fw-bold text-primary  " style="font-family: roboto;">SÁCH CÙNG CHỦ ĐỀ
+            </h2>
+        </div>
+            <%--<div class="section-header align-left d-block" >
+                <h2 class="" style="font-family: roboto;">
                 </h2>
-               
+            </div>--%>
+              <div class="product-list" data-aos="fade-up">
                 <asp:ListView ID="lstSach" runat="server" DataKeyNames="MaSach" DataSourceID="dsSachTheoChuDe">
                     <ItemTemplate>
-                        <div class="col-md-2 align-center border bg-light">
+                        <div class="col-md-3 align-left border bg-light">
                             <div class="product-item">
                                 <figure class="product-style">
                                     <img src="assets/<%# Eval("AnhBia") %>"
-                                        alt="Books" 
+                                        alt="Books"
                                         class="img-fluid product-item " />
 
                                     <button type="button"
@@ -73,20 +78,19 @@
                             </div>
                         </div>
                     </ItemTemplate>
-
                     <EmptyDataTemplate>
                         <div class="col-12 text-center">
                             <p>Không có sách nào.</p>
                         </div>
                     </EmptyDataTemplate>
                     <LayoutTemplate>
-                        <div class="row">
+                        <div class="row ">
                             <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
                         </div>
                     </LayoutTemplate>
                 </asp:ListView>
+                  </div>
 
-            </div>
         </div>
     </section>
     <asp:SqlDataSource ID="dsSach" runat="server" ConnectionString="<%$ ConnectionStrings:BookStoreDBConnectionString %>"
@@ -103,7 +107,7 @@
         ConnectionString='<%$ ConnectionStrings:BookStoreDBConnectionString %>'
         ProviderName='<%$ ConnectionStrings:BookStoreDBConnectionString.ProviderName %>' SelectCommand="SELECT top 5 * FROM [Sach] WHERE ([MaCD] = @MaCD)">
         <SelectParameters>
-            <asp:QueryStringParameter QueryStringField="macd" DefaultValue="5" Name="MaCD" Type="Int32"></asp:QueryStringParameter>
+            <asp:QueryStringParameter QueryStringField="macd" Name="MaCD" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 
