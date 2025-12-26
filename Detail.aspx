@@ -51,12 +51,12 @@
               <div class="product-list" data-aos="fade-up">
                 <asp:ListView ID="lstSach" runat="server" DataKeyNames="MaSach" DataSourceID="dsSachTheoChuDe">
                     <ItemTemplate>
-                        <div class="col-md-3 align-left border bg-light">
+                        <div class="col-md-2 align-left border bg-light m-3">
                             <div class="product-item">
                                 <figure class="product-style">
                                     <img src="assets/<%# Eval("AnhBia") %>"
                                         alt="Books"
-                                        class="img-fluid product-item " />
+                                        class="img-fluid product-item" />
 
                                     <button type="button"
                                         class="add-to-cart"
@@ -105,9 +105,11 @@
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="dsSachTheoChuDe" runat="server"
         ConnectionString='<%$ ConnectionStrings:BookStoreDBConnectionString %>'
-        ProviderName='<%$ ConnectionStrings:BookStoreDBConnectionString.ProviderName %>' SelectCommand="SELECT top 5 * FROM [Sach] WHERE ([MaCD] = @MaCD)">
+        ProviderName='<%$ ConnectionStrings:BookStoreDBConnectionString.ProviderName %>'
+        SelectCommand="SELECT top 5 * FROM [Sach] WHERE ([MaCD] = @MaCD) AND MaSach != @MaSach">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="macd" Name="MaCD" Type="Int32"></asp:QueryStringParameter>
+            <asp:QueryStringParameter QueryStringField="masach" Name="MaSach" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 
